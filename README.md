@@ -14,17 +14,18 @@ Here is a small sample of how I have used this code. This should get you up and 
 
 from csv_to_sql import parse_sql
 from csv_to_sql.NoCSVsFoundError import *
-
-'''Setup your path. The script will pull all .csv files from the location and convert them to tabels in the database'''
+```
+#Setup your path. The script will pull all .csv files from the location and convert them to tabels in the database
 csv_path = r"C:\Users\brucewayne\Desktop\test\\"
-'''Tell the function which attributes should be treated as numeric'''
+
+#Tell the function which attributes should be treated as numeric
 numeric_attr = ["StudyId", "age"]
 
 try:
     parse_sql.to_sql(csv_path, numeric_attr, "test.db", csv_path )
 except NoCSVsFoundException:
     print "No .CSV files found.\n Please check your directory or convert your files to valid .CSV format"
-
+```
 #Contributors
 Written by: John Mezzanotte
 If anyone has any ideas on how to improve or extend this project please let me know I would love to have some feedback. 
