@@ -7,12 +7,14 @@
 #
 # Notes:                This program will only parse .csv files.
 #
-# params:               to_sql(source_file, save_location, database_name)
+# params:               to_sql(source_path, numeric_attribute_names, database_name, save_location)
 #                           - source_file (required)  : Full path to the directory with your .csv files
+#                           - numeric_attribute_names : list of attributes that should be treated as numeric in the database. 
+#                                                       should be a list of strings referencing table attribute names.
+#                           - database_name(required) : The name you want to use for your database. If this argument is omitted the
+#                                                       program will use the default name "gates_sustainability"
 #                           - save_location(optional) : Location where you want to save your database. If this is argument is omitted
 #                                                        the program will use the users current working directory to save the file.
-#                           - database_name(optional) : The name you want to use for your database. If this argument is omitted the
-#                                                       program will use the default name "gates_sustainability"
 
 
 import glob
