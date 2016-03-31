@@ -13,9 +13,10 @@ Section to come
 #Tests
 Here is a small sample of how I have used this code. This should get you up and running pretty quickly 
 
+```
 from csv_to_sql import parse_sql
 from csv_to_sql.NoCSVsFoundError import *
-```
+
 #Setup your path. The script will pull all .csv files from the location and convert them to tabels in the database
 csv_path = r"C:\Users\brucewayne\Desktop\test\\"
 
